@@ -47,6 +47,23 @@ footer{
   width: 340px;
 }
 
+#boat.horizTranslateToRight {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 55vw !important;
+}
+
+#boat.horizTranslateToLeft {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 25vw !important;
+}
 
 #canvasBlock{
   position: absolute;
