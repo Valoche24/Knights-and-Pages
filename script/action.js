@@ -228,7 +228,7 @@ var stopCountUp = function() {
 var resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", stopCountUp);
 
-//traverserFleuve//
+//Traverser du bateau//
 
 var boatCurrentPosition = 0; // 0 : left, 1 : right
 var boat = document.getElementById("boat");
@@ -253,4 +253,4 @@ var traverserFleuve = function(){
 
 var traverserButton = document.getElementById("traverser");
 traverserButton.addEventListener("click", traverserFleuve);
-=======
+
