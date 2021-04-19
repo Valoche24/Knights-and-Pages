@@ -45,6 +45,7 @@ footer{
   background-size: cover;
   height: 320px;
   width: 340px;
+  transform: scaleX(1);
 }
 
 
@@ -53,10 +54,16 @@ footer{
   height: 600px;
   width: 500px;;
   right: 0px;
-  opacity: 0.3;
+  opacity: 0;
   background-color: FireBrick;
-  z-index: 8;
+  z-index: 5;
 }
+
+#traverser, #reset{
+  position: absolute;
+  left: 50vw;
+}
+
 
 
 
@@ -92,6 +99,7 @@ footer{
 
 .modal img{
   position: absolute;
+  z-index: 8;
   height: 370px;
 }
 
@@ -104,7 +112,23 @@ footer{
   margin: 2em;
 }
 
+#win{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
 
+#gameOver{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#win img, #gameOver img {
+  z-index: -1;
+}
 
 
 #overlay {
@@ -125,9 +149,9 @@ footer{
   pointer-events: all;
 }
 
-#GAMEOVER{
-  display: none;
-}
+
+
+
 
 
 /* /////////////////////////////// SLIDER /////////////////////////////// */
@@ -197,8 +221,10 @@ footer{
     display: inline-block;
     height: 125px;
     width: 125px;
-    border: solid 3px black;
+}
 
+#boat .case_table {
+  border: dotted 3px rgba(0, 0, 0, .4);
 }
 
 .hovered {
