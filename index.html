@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PUZZLE : Knights & Pages</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wqy0gzw.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+
+        <a href="index.html"><img src="image/save_the_page.svg" alt=""></a>
+
+    </header>
+
+    <button data-modal-target="#modal">i</button>
+    <div class="modal" id="modal">
+      <img src="image/papyrus.svg" alt="">
+      <div class="">
+        <button data-close-button class="close-button">&times;</button>
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <h2>Welcome</h2>
+            <p>This website is an ECV webdesign project</p>
+            <div class="numbertext">1/3</div>
+          </div>
+          <div class="mySlides">
+            <h2>What is porblem to solve?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <div class="numbertext">2/3</div>
+          </div>
+          <div class="mySlides">
+            <h2>How use the site</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Spiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeficia deserunt mollit anim id est laborum.</p>
+            <div class="numbertext">3/3</div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+
+
+    <div id="overlay"></div>
+
+    <section id="playGround">
+
+      <table id="leftTable" class="table">
+        <tr>
+          <td class="case_table" data-column="1" data-row="1" id="111"></td>
+          <td class="case_table" data-column="2" data-row="1" id="121"></td>
+        </tr>
+        <tr>
+          <td class="case_table" data-column="1" data-row="2" id="112"></td>
+          <td class="case_table" data-column="2" data-row="2" id="122"></td>
+        </tr>
+        <tr>
+          <td class="case_table" data-column="1" data-row="3" id="113"></td>
+          <td class="case_table" data-column="2" data-row="3" id="123"></td>
+        </tr>
+      </table>
+
+
+      <table id="boat">
+        <tr>
+          <td class="case_table" id="firstCaseBoat"></td>
+          <td class="case_table" id="secondCaseBoat"></td>
+        </tr>
+      </table>
+
+      <table id="rightTable" class="table">
+        <tr>
+          <td class="case_table" data-column="1" data-row="1" id="211"></td>
+          <td class="case_table" data-column="2" data-row="1" id="221"></td>
+        </tr>
+        <tr>
+          <td class="case_table" data-column="1" data-row="2" id="212"></td>
+          <td class="case_table" data-column="2" data-row="2" id="222"></td>
+        </tr>
+        <tr>
+          <td class="case_table" data-column="1" data-row="3" id="213"></td>
+          <td class="case_table" data-column="2" data-row="3" id="223"></td>
+        </tr>
+      </table>
+
+      <canvas id="canvasBlock"></canvas>
+
+    </section>
+
+    <button type="text" name="reset" id="traverser">Traverser le fleuve</button>
+
+    <div id="window-debbug">
+      <p>Time : <span id="seconds">0</span></p>
+
+      <button type="text" name="reset" id="reset">RESET</button>
+    </div>
+
+
+      <div class="modal" id="gameOver">
+        <img src="image/papyrus.svg" alt="">
+        <div class="head-modal">
+          <h2>Game Over</h2>
+        </div>
+      <p>BLABLABLABLA</p>
+      <button type="text" name="reset" id="reset">RESET</button>
+    </div>
+
+    <div class="modal" id="win">
+      <img src="image/papyrus.svg" alt="">
+      <div class="head-modal">
+        <h2>Win</h2>
+      </div>
+      <p>BLABLABLABLA</p>
+      <button type="text" name="reset" id="reset">RESET</button>
+    </div>
+
+
+
+
+
+
+    <script src="script/action.js"></script>
+
+  </body>
+</html>
