@@ -149,6 +149,15 @@ footer{
   display: none;
 }
 
+#WIN {
+  display: none;
+
+  #creator {
+    bottom: 0;
+    left: 10px;
+    text-align: right;
+  margin: 1em;
+    }
 
 /* /////////////////////////////// SLIDER /////////////////////////////// */
 
