@@ -26,9 +26,6 @@ footer{
 }
 
 
-}
-
-
 #playGround{
   display: flex;
   justify-content: space-between;
@@ -145,19 +142,27 @@ footer{
   pointer-events: all;
 }
 
-#GAMEOVER{
+
+#gameOver{
   display: none;
 }
 
 #WIN {
   display: none;
 
-  #creator {
-    bottom: 0;
-    left: 10px;
-    text-align: right;
-  margin: 1em;
-    }
+
+}
+
+#creator {
+  bottom: 0;
+  left: 10px;
+  text-align: right;
+margin: 1em;
+
+
+
+
+  }
 
 /* /////////////////////////////// SLIDER /////////////////////////////// */
 
