@@ -1,0 +1,259 @@
+body{
+  background-image: url("../image/river.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header{
+  height: 6em;
+  background-color: #f1c794;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header a{
+  height: 150%;
+}
+
+img{
+position: relative;
+display: flex;
+justify-content: center;
+height: 100%;
+
+
+}
+
+footer{
+  height: 3em;
+  background-color: #f1c794;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:  3em;
+  padding: 2em;
+}
+
+
+#playGround{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* /////////////////////////////// BOAT /////////////////////////////// */
+
+#boat{
+  position: absolute;
+  left: 25vw;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../image/boat.PNG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 470px;
+}
+
+#boat.horizTranslateToRight {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 55vw !important;
+}
+
+#boat.horizTranslateToLeft {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 25vw !important;
+}
+
+#canvasBlock{
+  position: absolute;
+  height: 600px;
+  width: 500px;;
+  right: 0px;
+  opacity: 0.3;
+  background-color: FireBrick;
+  z-index: 8;
+}
+
+
+
+
+/* /////////////////////////////// POP UP /////////////////////////////// */
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.modal img{
+  position: absolute;
+  height:800px;
+}
+
+.mySlides{
+  width: 600px;
+}
+
+.mySlides :nth-child(1n){
+  text-align: center;
+  margin: 1em;
+}
+
+
+
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+#gameOver{
+  display: none;
+}
+
+#WIN {
+  display: none;
+
+
+}
+
+#creator {
+  bottom: 0;
+  left: 10px;
+  text-align: right;
+margin: 1em;
+
+
+
+
+  }
+
+/* /////////////////////////////// SLIDER /////////////////////////////// */
+
+/* Voir le slide au chargement de la page */
+/* .mySlides {display: none;}
+ */
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  bottom: 20%;
+
+}
+
+.prev img,.next img {
+  width: 150px;
+  height: 150px;
+
+
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 30%;
+
+}
+
+
+/* Fading animation
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
+/* /////////////////////////////// Humain /////////////////////////////// */
+
+.base {
+    position: relative;
+    height: 125px;
+    width: 125px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tenu {
+    mix-blend-mode: color-burn;
+}
+
+.case_table {
+    display: inline-block;
+    height: 125px;
+    width: 125px;
+    border: solid 3px black;
+
+}
+
+.hovered {
+    border-style: dashed;
+}
+
+#leftTable, #rightTable{
+  margin: 3em;
+}

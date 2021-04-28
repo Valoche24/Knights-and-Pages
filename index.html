@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PUZZLE : Knights & Pages</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tingle.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wqy0gzw.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+
+        <a href="index.html"><img src="image/logo.png" alt=""></a>
+
+
+    </header>
+
+
+
+    <button data-modal-target="#modal">i</button>
+    <div class="modal" id="modal">
+      <img src="image/papyrus.PNG" alt="">
+      <div class="">
+        <button data-close-button class="close-button">&times;</button>
+        <div class="slideshow-container">
+          <div class="mySlides">
+            <h2>Welcome</h2>
+            <p>Welcome to the KNIGHTS AND PAGES game! In a forest full of danger, there are knights and their servants.
+An obstacle is facing them, it's up to you to find the solution!
+
+This game is a web design project made at ECV</p>
+            <div class="numbertext">1/3</div>
+          </div>
+          <div class="mySlides">
+            <h2>What is porblem to solve?</h2>
+            <p>Many years ago, three knight waited to cross the river neva. Each Knight had his own page, so there were six people. The boat that they had could only carry two. However the knights were ferocious killers and the three pages were terrified. In fact, it was certain that any of the page would die of heart failure if he were not protected at every instant from the other knights by the presence oçf his own master. </p>
+            <p>was there any way to cross everyone over the river without losing a page ?</p>
+            <div class="numbertext">2/3</div>
+          </div>
+          <div class="mySlides">
+            <h2>How use the site</h2>
+            <p>The boat has two seats, the boat can't move if it's empty, drag one knight or pages on the boat with a click and a drag with your mouse and click on the button cross the river.Get to the other side, drag your character to the case to deposit them.</p>
+              <p>Once this window is closed, you can reread the instructions by clicking on the "i" button in the right corner of the game. </p>
+              <p>challenge yourself with the countdown under the "cross river button". </p>
+              <p>Good luck! </p>
+            <div class="numbertext">3/3</div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)"><img src="image/flecheleft.png" alt=""></a>
+        <a class="next" onclick="plusSlides(1)"> <img src="image/flecheright.png" alt="">  </a>
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+    <section id="playGround">
+
+      <table id="leftTable" class="table">
+        <tr>
+          <td class="case_table"><img class="base" draggable="true" src="image/knight-blue.svg" alt="" data-humain="knight" data-color="red"></td>
+          <td class="case_table"><img class="base" draggable="true" src="image/page-blue.svg" alt="" data-humain="page" data-color="red"></td>
+        </tr>
+        <tr>
+          <td class="case_table"><img class="base" draggable="true" src="image/knight-red.svg" alt="" data-humain="knight" data-color="blue"></td>
+          <td class="case_table"><img class="base" draggable="true" src="image/page-red.svg" alt="" data-humain="page" data-color="blue"></td>
+        </tr>
+        <tr>
+          <td class="case_table"><img class="base" draggable="true" src="image/knight-yellow.svg" alt="" data-humain="knight" data-color="yellow"></td>
+          <td class="case_table"><img class="base" draggable="true" src="image/page-yellow.svg" alt="" data-humain="page" data-color="yellow"></td>
+        </tr>
+      </table>
+
+
+      <table id="boat">
+        <tr>
+          <td class="case_table" id="firstCaseBoat"></td>
+          <td class="case_table" id="secondCaseBoat"></td>
+        </tr>
+      </table>
+
+      <table id="rightTable" class="table">
+        <tr>
+          <td class="case_table"></td>
+          <td class="case_table"></td>
+        </tr>
+        <tr>
+          <td class="case_table"></td>
+          <td class="case_table"></td>
+        </tr>
+        <tr>
+          <td class="case_table"></td>
+          <td class="case_table"></td>
+        </tr>
+      </table>
+
+      <canvas id="canvasBlock"></canvas>
+
+
+    </section>
+
+    <input type="button" id="traverser" value="Traverser le fleuve">
+
+    <div id="window-debbug">
+      <p>Time : <span id="seconds">0</span></p>
+
+      <button type="text" name="reset" id="reset">RESET</button>
+    </div>
+
+    <div class="modal" id="gameOver">
+      <div class="head-modal">
+        <button data-close-button class="close-button">&times;</button>
+        <h2>GAME OVER </h2>
+      </div>
+          <p>The knight kill the page! </p>
+    </div>
+
+    <div class="modal" id="WIN">
+      <div class="head-modal">
+        <button data-close-button class="close-button">&times;</button>
+        <h2>You Win </h2>
+      </div>
+          <p>They All cross the river!  </p>
+    </div>
+
+    <footer>
+
+
+        <p>  DE BLOMAC Camille  <p>
+        <p>  GAY Laure-Helene <p>
+        <p>  LOPAT Mélodie  <p>
+        <p>VALIANI YAnn <p>
+
+
+
+
+
+    </footer>
+
+
+
+
+    <script src="script/action.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/tingle.js"></script>
+
+
+
+
+  </body>
+</html>
