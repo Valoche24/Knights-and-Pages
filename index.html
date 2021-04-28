@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>PUZZLE : Knights & Pages</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/tingle.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/typo.css">
     <link rel="stylesheet" href="https://use.typekit.net/wqy0gzw.css">
@@ -13,10 +12,10 @@
   </head>
   <body>
 
+    
     <header>
 
         <a href="index.html"><img src="image/save_the_page.svg" alt=""></a>
-
 
     </header>
 
@@ -46,22 +45,24 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
     </div>
+
+
     <div id="overlay"></div>
 
     <section id="playGround">
 
       <table id="leftTable" class="table">
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-blue.svg" alt="" data-humain="knight" data-color="red"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-blue.svg" alt="" data-humain="page" data-color="red"></td>
+          <td class="case_table" data-column="1" data-row="1" id="111"></td>
+          <td class="case_table" data-column="2" data-row="1" id="121"></td>
         </tr>
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-red.svg" alt="" data-humain="knight" data-color="blue"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-red.svg" alt="" data-humain="page" data-color="blue"></td>
+          <td class="case_table" data-column="1" data-row="2" id="112"></td>
+          <td class="case_table" data-column="2" data-row="2" id="122"></td>
         </tr>
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-yellow.svg" alt="" data-humain="knight" data-color="yellow"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-yellow.svg" alt="" data-humain="page" data-color="yellow"></td>
+          <td class="case_table" data-column="1" data-row="3" id="113"></td>
+          <td class="case_table" data-column="2" data-row="3" id="123"></td>
         </tr>
       </table>
 
@@ -75,25 +76,24 @@
 
       <table id="rightTable" class="table">
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="1" id="211"></td>
+          <td class="case_table" data-column="2" data-row="1" id="221"></td>
         </tr>
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="2" id="212"></td>
+          <td class="case_table" data-column="2" data-row="2" id="222"></td>
         </tr>
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="3" id="213"></td>
+          <td class="case_table" data-column="2" data-row="3" id="223"></td>
         </tr>
       </table>
 
       <canvas id="canvasBlock"></canvas>
 
-
     </section>
 
-    <input type="button" id="traverser" value="Traverser le fleuve">
+    <button type="text" name="reset" id="traverser">Traverser le fleuve</button>
 
     <div id="window-debbug">
       <p>Time : <span id="seconds">0</span></p>
@@ -101,22 +101,54 @@
       <button type="text" name="reset" id="reset">RESET</button>
     </div>
 
-    <div class="modal" id="gameOver">
-      <div class="head-modal">
-        <button data-close-button class="close-button">&times;</button>
-        <h2>Titre2</h2>
-      </div>
-          <p>BLABLABLABLA</p>
+
+      <div class="modal" id="gameOver">
+        <img src="image/papyrus.svg" alt="">
+        <div class="head-modal">
+          <h2>Game Over</h2>
+        </div>
+      <p>BLABLABLABLA</p>
+      <button type="text" name="reset" id="reset">RESET</button>
     </div>
 
-    <footer></footer>
+    <div class="modal" id="win">
+      <img src="image/papyrus.svg" alt="">
+      <div class="head-modal">
+        <h2>Win</h2>
+      </div>
+      <p>BLABLABLABLA</p>
+      <button type="text" name="reset" id="reset">RESET</button>
+    </div>
+
+    <audio id="cut">
+      <source src="script/soundFX/soundFXcut.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="flute">
+      <source src="script/soundFX/soundFXflute.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="hurt">
+      <source src="script/soundFX/soundFXhurt.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio controls style="display:none" id="audio" autoplay="true" loop="true">
+      <source src="script/soundFX/soundFXmusique.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="page">
+      <source src="script/soundFX/soundFXpage.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="rame">
+      <source src="script/soundFX/soundFXrame.mp3" type="audio/mpeg">
+    </audio>
+
 
 
 
 
     <script src="script/action.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/tingle.js"></script>
 
   </body>
 </html>
