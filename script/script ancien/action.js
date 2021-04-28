@@ -99,16 +99,6 @@ var gameOver = function(){
   overlay.classList.add("active");
 }
 
-  function refreshloose() { 
-    window.location.reload(false); 
-  }
-
-  //WIN
-
-   function refreshwin() {
-      window.location.reload(false); 
-    }
-
 //CHECKER TABLE
 
 var checkerTable = function(){
@@ -464,11 +454,6 @@ var winCondition = function() {
   }
 }
 
-// test images I
-var img = document.createElement("img");
-img.src = "image/papyrus.svg";
-
-
 
 // Chrono
 
@@ -486,12 +471,12 @@ var timer = window.setInterval(countUp, 1000);
 
 //////////RESET//////////
 
-var resetButton = document.getElementById('reset');
+var resetButton = document.getElementById("reset");
 
 //Remet le compteur à 0
 var stopCountUp = function() {
   seconds.textContent = 0;
-}
+};
 
 //Remet le bateau à ca position initial
 var intialBoat = function() {
@@ -514,38 +499,18 @@ var RESET = function() {
   //debbugSelector.style.backgroundColor = "";
   document.location.reload();
 }
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton1');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton2');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton3');
-  closse_button.style.display = "none";
-}
-function resetreload(){
-  document.location.reload();
-  
-}
-
 
 // auto show modal
-// call the fucntion after 3 sec
+// call the fucntion after 1 sec
 setTimeout(show_modal, 1000);
-
+// so modal will stay 3 sec
  function show_modal(){
  	 var popup_box = document.getElementById('popup-box');
  	 popup_box.style.display = "block";
  }
-
  function close_modal(){
-  var popup_box = document.getElementById('popup-box');
-  popup_box.style.display = "none";
-}
-
+ 	 var popup_box = document.getElementById('popup-box');
+ 	 popup_box.style.display = "none";
+ }
 
 resetButton.addEventListener("click", RESET);
-
