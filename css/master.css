@@ -1,28 +1,37 @@
 body{
-  background-image: url("../image/river.svg");
+  background-image: url("../image/river.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 header{
   height: 6em;
-  background-color: orange;
+  background-color: #f1c794;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header a{
-  height: 80%;
+  height: 150%;
 }
 
 img{
-  height: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+height: 100%;
 }
 
 footer{
-  height: 5em;
-  background-color: skyBlue;
+  height: 3em;
+  background-color: #f1c794;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:  3em;
+  padding: 2em;
 }
 
 
@@ -30,6 +39,7 @@ footer{
   display: flex;
   justify-content: space-between;
 }
+
 
 /* /////////////////////////////// BOAT /////////////////////////////// */
 
@@ -40,14 +50,31 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../image/boat.svg");
+  background-image: url("../image/boat.PNG");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320px;
-  width: 340px;
+  height: 400px;
+  width: 470px;
   transform: scaleX(1);
 }
 
+#boat.horizTranslateToRight {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 55vw !important;
+}
+
+#boat.horizTranslateToLeft {
+  -webkit-transition: 3s;
+  -moz-transition: 3s;
+  -ms-transition: 3s;
+  -o-transition: 3s;
+  transition: 1s;
+  left: 25vw !important;
+}
 
 #canvasBlock{
   position: absolute;
@@ -59,9 +86,14 @@ footer{
   z-index: 5;
 }
 
-#traverser, #reset{
+#traverser {
   position: absolute;
   left: 50vw;
+}
+
+#reset {
+  position: center;
+  left: 100px;
 }
 
 
@@ -99,7 +131,7 @@ footer{
 
 .modal img{
   position: absolute;
-  height: 370px;
+  height:800px;
 }
 
 .mySlides{
@@ -108,7 +140,25 @@ footer{
 
 .mySlides :nth-child(1n){
   text-align: center;
-  margin: 2em;
+  margin: 1em;
+}
+
+#win{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#gameOver{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#win img, #gameOver img {
+  margin: 1em;
 }
 
 #win{
@@ -148,8 +198,50 @@ footer{
   pointer-events: all;
 }
 
+.closebutton1 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-100px;
+}
 
 
+.closebutton2 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-40px;
+}
+
+
+.closebutton3 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-40px;
+}
+
+
+
+#gameOver{
+  display: none;
+}
+
+#WIN {
+  display: none;
+}
 
 
 
@@ -168,39 +260,27 @@ footer{
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  font-weight: bold;
-  font-size: 18px;
   user-select: none;
+  position: absolute;
+  bottom: 20%;
+
+}
+
+.prev img,.next img {
+  width: 150px;
+  height: 150px;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 0px;
 }
 
-
-/* Fading animation
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.5s;
-  animation-name: fade;
-  animation-duration: 0.5s;
+.prev {
+  left: 0px;
+  right: 30%;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-} */
 
 /* /////////////////////////////// Humain /////////////////////////////// */
 
@@ -232,4 +312,34 @@ footer{
 
 #leftTable, #rightTable{
   margin: 3em;
+}
+
+#popup-box{
+  width: 650px;
+	height: 400px;
+	box-sizing: border-box;
+	padding: 100px;
+  align-items: center;
+	position: fixed;
+	top: calc(50% - 125px);
+	left: calc(50% - 200px);
+	display: none;
+  background-image:url("../image/papyrus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 14px;
+}
+
+#popuptext {
+  text-align: center;
+}
+
+#close-button{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#text {
+  font-size: 14px;
 }

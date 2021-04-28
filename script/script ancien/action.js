@@ -88,34 +88,21 @@ var intialPositionKP = function() {
 
 //ACTIVATION DE L'INITIALISATION
 intialPositionKP();
-document.getElementById("audio").play();
+
 
 
 //GAMEOVER
 
 var debbugSelector = document.getElementById("window-debbug");
 var gameOver = function(){
-  document.getElementById("hurt").play();
-  document.getElementById("cut").play();
-  document.getElementById("rame").pause();
   document.getElementById("gameOver").style.display = "flex";
   overlay.classList.add("active");
 }
 
-  function refreshloose() {
-    window.location.reload(false);
-  }
-
-  //WIN
-
-   function refreshwin() {
-      window.location.reload(false);
-    }
-
 //CHECKER TABLE
 
 var checkerTable = function(){
-  if (coin%2 == 0) {
+  if (coin%2 === 0) {
     var actualTable = leftTable;
   } else {
     var actualTable = rightTable;
@@ -179,7 +166,7 @@ var checkerBoat = function(){
 
 var moveElement = function(){
 
-  if (coin%2 == 0){
+  if (coin%2 === 0){
     var tableNumber = 1; // Voir avec actualTable pour optimiser
   } else {
     var tableNumber = 2;
@@ -272,10 +259,6 @@ var moveElement = function(){
 }
 
 var moveBoat = function(){
-
-  document.getElementById("rame").play();
-
-
   if (coin%2 === 0) {
     idBoat.style.left = "25vw";
     idBoat.style.transform = "scaleX(1)";
@@ -334,14 +317,12 @@ function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
   overlay.classList.add('active')
-  document.getElementById("page").play();
 }
 
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
   overlay.classList.remove('active')
-  document.getElementById("page").play();
 }
 
 
@@ -359,7 +340,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  document.getElementById("page").play();
   var i;
   var slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {slideIndex = 1}
@@ -429,14 +409,12 @@ var traverserButton = document.getElementById("traverser");
 
 var TRAVERSER = function(){
   if (firstCaseBoat.firstChild === null && secondCaseBoat.firstChild === null ){
-    console.log("Une des cases sont vides !!! Donc tu ne peux pas partir")
+    console.log("Un des cases sont vides !!! Donc tu ne peux pas partir")
   } else {
-  movePosition();
   checkerTable();
   checkerBoat();
-  console.log(coin);
+  movePosition();
   coin+=1;
-  console.log(coin);
   checkerTable();
   winCondition();
   }
@@ -462,14 +440,12 @@ var winCondition = function() {
 
     if(document.getElementById(actualCell).firstChild !== null){
       compteurElement += 1;
-      console.log("Compter win à  :", compteurElement);
+      console.log(compteurElement);
     } else {
       //pass
     }
   }
   if(compteurElement == 6){
-    document.getElementById("flute").play();
-    document.getElementById("rame").pause();
     document.getElementById("win").style.display = "flex";
     overlay.classList.add("active");
 
@@ -495,50 +471,7 @@ var timer = window.setInterval(countUp, 1000);
 
 //////////RESET//////////
 
-var resetButton = document.getElementById('reset');
-
-//Remet le compteur à 0
-var stopCountUp = function() {
-  seconds.textContent = 0;
-}
-
-//Remet le bateau à ca position initial
-var intialBoat = function() {
-  idBoat.style.left = "25vw";
-}
-
-// Remet le BlockCanvas à ca position initial
-var intialCanvasBlock = function() {
-  idCanvas.style.right = "O";
-  idCanvas.style.left = "";
-}
-
-// FONCTION CALL
-var RESET = function() {
-  //coin = 0;
-  //intialPositionKP();
-  //intialBoat();
-  //intialCanvasBlock();
-  //stopCountUp();
-  //debbugSelector.style.backgroundColor = "";
-  document.location.reload();
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton1');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton2');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton3');
-  closse_button.style.display = "none";
-}
-function resetreload(){
-  document.location.reload();
-
-}
+var resetButton = document.getElementById("reset");
 
 //Remet le compteur à 0
 var stopCountUp = function() {
@@ -567,20 +500,17 @@ var RESET = function() {
   document.location.reload();
 }
 
-
 // auto show modal
-// call the fucntion after 3 sec
+// call the fucntion after 1 sec
 setTimeout(show_modal, 1000);
-
+// so modal will stay 3 sec
  function show_modal(){
  	 var popup_box = document.getElementById('popup-box');
  	 popup_box.style.display = "block";
  }
-
  function close_modal(){
-  var popup_box = document.getElementById('popup-box');
-  popup_box.style.display = "none";
-}
-
+ 	 var popup_box = document.getElementById('popup-box');
+ 	 popup_box.style.display = "none";
+ }
 
 resetButton.addEventListener("click", RESET);

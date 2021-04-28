@@ -2,47 +2,60 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>PUZZLE : Knights & Pages</title>
+    <title> ENIGMA : Knights & Pages</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/typo.css">
     <link rel="stylesheet" href="https://use.typekit.net/wqy0gzw.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="css/favicon.ico" />
+    <!--Mettre le favicon, icon en haut de page: -->
   </head>
   <body>
 
-    
+
     <header>
 
-        <a href="index.html"><img src="image/save_the_page.svg" alt=""></a>
+        <a href="index.html"><img src="image/logo.png" alt=""></a>
 
     </header>
 
+
+
     <button data-modal-target="#modal">i</button>
     <div class="modal" id="modal">
-      <img src="image/papyrus.svg" alt="">
+      <img src="image/papyrus.PNG" alt="">
       <div class="">
         <button data-close-button class="close-button">&times;</button>
         <div class="slideshow-container">
           <div class="mySlides">
             <h2>Welcome</h2>
-            <p>This website is an ECV webdesign project</p>
+            <p>Welcome to the KNIGHTS AND PAGES game! In a forest full of danger, there are knights and their servants.
+              An obstacle is facing them, it's up to you to find the solution! This game is a web design project made at ECV</p>
             <div class="numbertext">1/3</div>
           </div>
           <div class="mySlides">
-            <h2>What is porblem to solve?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <h2>What is problem to solve?</h2>
+            <p> Many years ago, three knights waited to cross the river neva.Each knight had his own page, so there were six people.</p>
+            <p>The boat that they had could only carry two.<br>
+              However the knights were ferocious killers
+              and the three pages were terrified. <br> In fact, it was certain that any of the pages would die
+              of heart failure if he were not protected at every instant from the other knights by the presence of his own master.</p>
+            <p>Was there any way to cross everyone over the river <br> without losing a page ?</p>
             <div class="numbertext">2/3</div>
           </div>
           <div class="mySlides">
             <h2>How use the site</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Spiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeSpiffy Plastic -> 3/4 timeficia deserunt mollit anim id est laborum.</p>
+            <p>The boat has two seats, the boat can't move if it's empty, drag one knight or pages on the boat with a click and a drag with your mouse and click on the button cross the river.Get to the other side, drag your character to the case to deposit them.</p>
+              <p>Once this window is closed, you can reread the instructions by clicking on the "i" button in the right corner of the game. </p>
+              <p>challenge yourself with the countdown under the "cross river button". </p>
+              <p>Good luck! </p>
             <div class="numbertext">3/3</div>
           </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="prev" onclick="plusSlides(-1)"><img src="image/flecheleft.png" alt=""></a>
+        <a class="next" onclick="plusSlides(1)"> <img src="image/flecheright.png" alt="">  </a>
       </div>
     </div>
 
@@ -107,46 +120,90 @@
         <div class="head-modal">
           <h2>Game Over</h2>
         </div>
-      <p>BLABLABLABLA</p>
+      <p>HO no, you loose..</p>
       <button type="text" name="reset" id="reset">RESET</button>
+      <input type="button" onclick="refreshloose()" value="Retry"/>
     </div>
 
     <div class="modal" id="win">
       <img src="image/papyrus.svg" alt="">
       <div class="head-modal">
-        <h2>Win</h2>
+        <h2> WIN </h2>
+        <br>
+        <p>Well done, you won !</p>
+        <br>
+        <input type="button" onclick="refreshwin()" value="Good Game"/> <br/><br/>
       </div>
-      <p>BLABLABLABLA</p>
-      <button type="text" name="reset" id="reset">RESET</button>
     </div>
 
-    <audio id="cut">
-      <source src="script/soundFX/soundFXcut.mp3" type="audio/mpeg">
-    </audio>
 
-    <audio id="flute">
-      <source src="script/soundFX/soundFXflute.mp3" type="audio/mpeg">
-    </audio>
+    <div id="popup-box">
+      <div class="top-bar">
+        <button onclick="close_modal()" id="close-button">X</button>
+      </div>
 
-    <audio id="hurt">
-      <source src="script/soundFX/soundFXhurt.mp3" type="audio/mpeg">
-    </audio>
+      <div class="content">
+        <center>
+          <h2>
+            Welcome
+          </h2>
+      </center>
+      </div>
 
-    <audio controls style="display:none" id="audio" autoplay="true" loop="true">
-      <source src="script/soundFX/soundFXmusique.mp3" type="audio/mpeg">
-    </audio>
+      <div id="popuptext">
+        <p> <br> Many years ago, three knights waited to cross the river neva.<br>
+          Each knight had his own page, so there were six people.<br>
+          The boat that they had could only carry two.<br>
+        </p>
 
-    <audio id="page">
-      <source src="script/soundFX/soundFXpage.mp3" type="audio/mpeg">
-    </audio>
+        <p>  However the knights were ferocious killers <br>
+          and the three pages were terrified. <br> In fact, it was certain that any of the pages would die
+          of heart failure <br> if he were not protected at every instant <br> from the other knights by the presence of his own master.</p>
 
-    <audio id="rame">
-      <source src="script/soundFX/soundFXrame.mp3" type="audio/mpeg">
-    </audio>
+          <p>Was there any way to cross everyone
+            over the river <br> without losing a page ?</p>
+
+      </div>
+    </div>
 
 
 
+    <footer>
+        <p>  DE BLOMAC Camille  <p>
+        <p>  GAY Laure-Helene <p>
+        <p>  LOPAT Mélodie  <p>
+        <p>VALIANI YAnn <p>
+    </footer>
 
+    <h2>Win</h2>
+  </div>
+  <p>BLABLABLABLA</p>
+  <button type="text" name="reset" id="reset">RESET</button>
+</div>
+
+<audio id="cut">
+  <source src="script/soundFX/soundFXcut.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="flute">
+  <source src="script/soundFX/soundFXflute.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="hurt">
+  <source src="script/soundFX/soundFXhurt.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls style="display:none" id="audio" autoplay="true" loop="true">
+  <source src="script/soundFX/soundFXmusique.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="page">
+  <source src="script/soundFX/soundFXpage.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="rame">
+  <source src="script/soundFX/soundFXrame.mp3" type="audio/mpeg">
+</audio>
 
     <script src="script/action.js"></script>
 
