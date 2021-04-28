@@ -1,0 +1,314 @@
+body{
+  background-image: url("../image/river.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header{
+  height: 6em;
+  background-color: #CCAC94;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header a{
+  height: 80%;
+}
+
+img{
+  height: 100%;
+}
+
+
+footer{
+  height: 5em;
+  background-color: skyBlue;
+}
+
+
+#playGround{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* /////////////////////////////// BOAT /////////////////////////////// */
+
+#boat{
+  position: absolute;
+  left: 25vw;
+  top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../image/boat.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  width: 340px;
+  transform: scaleX(1);
+}
+
+
+#canvasBlock{
+  position: absolute;
+  height: 600px;
+  width: 500px;;
+  right: 0px;
+  opacity: 0;
+  background-color: FireBrick;
+  z-index: 5;
+}
+
+#traverser {
+  position: absolute;
+  left: 50vw;
+}
+
+#reset {
+  position: center;
+  left: 100px;
+}
+
+
+
+
+
+
+/* /////////////////////////////// POP UP /////////////////////////////// */
+
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.modal img{
+  position: absolute;
+  height: 370px;
+}
+
+.mySlides{
+  width: 600px;
+}
+
+.mySlides :nth-child(1n){
+  text-align: center;
+  margin: 2em;
+}
+
+#win{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#gameOver{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#win img, #gameOver img {
+  z-index: -1;
+}
+
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index: 5;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.closebutton1 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-100px;
+}
+
+
+.closebutton2 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-40px;
+}
+
+
+.closebutton3 {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  top:-40px;
+}
+
+
+
+
+
+
+
+/* /////////////////////////////// SLIDER /////////////////////////////// */
+
+/* Voir le slide au chargement de la page */
+/* .mySlides {display: none;}
+ */
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0px;
+}
+.prev {
+  left: 0px;
+}
+
+
+/* Fading animation
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+} */
+
+/* /////////////////////////////// Humain /////////////////////////////// */
+
+.base {
+    position: relative;
+    height: 125px;
+    width: 125px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tenu {
+    mix-blend-mode: color-burn;
+}
+
+.case_table {
+    display: inline-block;
+    height: 125px;
+    width: 125px;
+}
+
+#boat .case_table {
+  border: dotted 3px rgba(0, 0, 0, .4);
+}
+
+.hovered {
+    border-style: dashed;
+}
+
+#leftTable, #rightTable{
+  margin: 3em;
+}
+
+
+#popup-box{
+  width: 650px;
+	height: 400px;
+	box-sizing: border-box;
+	padding: 100px;
+  align-items: center;
+	position: fixed;
+	top: calc(50% - 125px);
+	left: calc(50% - 200px);
+	display: none;
+  background-image:url("../image/papyrus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 14px;
+}
+
+#popuptext {
+  text-align: center;
+}
+
+#close-button{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#text {
+  font-size: 14px;
+}

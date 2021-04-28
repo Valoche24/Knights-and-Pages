@@ -1,0 +1,27 @@
+/* /////////////////////////////// Font Adobe Cabazon + Fakir /////////////////////////////// */
+@import url("https://use.typekit.net/wqy0gzw.css");
+
+/* /////////////////////////////// GOOGLE FONT Playfair Display /////////////////////////////// */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap');
+
+body{
+  font-family: fakir-new, sans-serif;
+  font-feature-settings: 'dlig', 'liga', 'calt', 'frac', "salt"; /* MARCHE A MOITIé !!! */
+  font-variant-numeric: diagonal-fractions;
+}
+
+h2{
+  font-family: cabazon, serif;
+}
+
+.numbertext{
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+
+}
+
+
+/* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide
+
+½
+*/
