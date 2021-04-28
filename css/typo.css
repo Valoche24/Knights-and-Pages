@@ -8,10 +8,12 @@ body{
   font-family: fakir-new, sans-serif;
   font-feature-settings: 'dlig', 'liga', 'calt', 'frac', "salt"; /* MARCHE A MOITIé !!! */
   font-variant-numeric: diagonal-fractions;
+
 }
 
 h2{
   font-family: cabazon, serif;
+  font-size: 3em;
 }
 
 .numbertext{
@@ -19,9 +21,10 @@ h2{
 }
 
 footer {
-  font-family: sans-serif;
-
+  font-family: fakir-new, serif;
+  line-height: 1.4em;
 }
+
 
 /* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide
 

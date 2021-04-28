@@ -1,28 +1,39 @@
 body{
-  background-image: url("../image/river.svg");
+  background-image: url("../image/river.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 header{
   height: 6em;
-  background-color: orange;
+  background-color: #f1c794;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 header a{
-  height: 80%;
+  height: 150%;
 }
 
 img{
-  height: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+height: 100%;
+
+
 }
 
 footer{
-  height: 5em;
-  background-color: skyBlue;
+  height: 3em;
+  background-color: #f1c794;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:  3em;
+  padding: 2em;
 }
 
 
@@ -40,11 +51,11 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../image/boat.svg");
+  background-image: url("../image/boat.PNG");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320px;
-  width: 340px;
+  height: 400px;
+  width: 470px;
 }
 
 #boat.horizTranslateToRight {
@@ -109,7 +120,7 @@ footer{
 
 .modal img{
   position: absolute;
-  height: 370px;
+  height:800px;
 }
 
 .mySlides{
@@ -118,7 +129,7 @@ footer{
 
 .mySlides :nth-child(1n){
   text-align: center;
-  margin: 2em;
+  margin: 1em;
 }
 
 
@@ -179,19 +190,23 @@ margin: 1em;
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  font-weight: bold;
-  font-size: 18px;
   user-select: none;
+  position: absolute;
+  bottom: 20%;
+
+}
+
+.prev img,.next img {
+  width: 150px;
+  height: 150px;
+
+
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 30%;
+
 }
 
 

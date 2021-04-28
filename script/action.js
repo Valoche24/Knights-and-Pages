@@ -253,4 +253,3 @@ var traverserFleuve = function(){
 
 var traverserButton = document.getElementById("traverser");
 traverserButton.addEventListener("click", traverserFleuve);
-
