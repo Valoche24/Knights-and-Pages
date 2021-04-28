@@ -12,12 +12,17 @@ body{
 
 h2{
   font-family: cabazon, serif;
+  font-size: 3em;
 }
 
 .numbertext{
   font-family: 'Playfair Display', serif;
   font-size: 20px;
+}
 
+footer {
+  font-family: fakir-new, serif;
+  line-height: 1.4em;
 }
 
 

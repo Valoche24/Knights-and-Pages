@@ -548,3 +548,4 @@ setTimeout(show_modal, 1000);
 
 
 resetButton.addEventListener("click", RESET);
+
