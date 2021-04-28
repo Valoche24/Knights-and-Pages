@@ -55,6 +55,7 @@ footer{
   background-size: cover;
   height: 400px;
   width: 470px;
+  transform: scaleX(1);
 }
 
 #boat.horizTranslateToRight {
@@ -157,13 +158,26 @@ footer{
 }
 
 #win img, #gameOver img {
-  z-index: -1;
-}
-=======
   margin: 1em;
 }
 
+#win{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
 
+#gameOver{
+  display: none;
+  transform: none;
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+#win img, #gameOver img {
+  z-index: -1;
+}
 
 
 #overlay {
@@ -220,7 +234,6 @@ footer{
 }
 
 
-=======
 
 #gameOver{
   display: none;
@@ -268,24 +281,6 @@ footer{
   right: 30%;
 }
 
-
-/* Fading animation
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0.5s;
-  animation-name: fade;
-  animation-duration: 0.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-} */
 
 /* /////////////////////////////// Humain /////////////////////////////// */
 

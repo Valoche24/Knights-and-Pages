@@ -88,31 +88,34 @@ var intialPositionKP = function() {
 
 //ACTIVATION DE L'INITIALISATION
 intialPositionKP();
-
+document.getElementById("audio").play();
 
 
 //GAMEOVER
 
 var debbugSelector = document.getElementById("window-debbug");
 var gameOver = function(){
+  document.getElementById("hurt").play();
+  document.getElementById("cut").play();
+  document.getElementById("rame").pause();
   document.getElementById("gameOver").style.display = "flex";
   overlay.classList.add("active");
 }
 
-  function refreshloose() { 
-    window.location.reload(false); 
+  function refreshloose() {
+    window.location.reload(false);
   }
 
   //WIN
 
    function refreshwin() {
-      window.location.reload(false); 
+      window.location.reload(false);
     }
 
 //CHECKER TABLE
 
 var checkerTable = function(){
-  if (coin%2 === 0) {
+  if (coin%2 == 0) {
     var actualTable = leftTable;
   } else {
     var actualTable = rightTable;
@@ -176,7 +179,7 @@ var checkerBoat = function(){
 
 var moveElement = function(){
 
-  if (coin%2 === 0){
+  if (coin%2 == 0){
     var tableNumber = 1; // Voir avec actualTable pour optimiser
   } else {
     var tableNumber = 2;
@@ -269,6 +272,10 @@ var moveElement = function(){
 }
 
 var moveBoat = function(){
+
+  document.getElementById("rame").play();
+
+
   if (coin%2 === 0) {
     idBoat.style.left = "25vw";
     idBoat.style.transform = "scaleX(1)";
@@ -327,12 +334,14 @@ function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
   overlay.classList.add('active')
+  document.getElementById("page").play();
 }
 
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
   overlay.classList.remove('active')
+  document.getElementById("page").play();
 }
 
 
@@ -350,6 +359,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  document.getElementById("page").play();
   var i;
   var slides = document.getElementsByClassName("mySlides");
   if (n > slides.length) {slideIndex = 1}
@@ -419,12 +429,14 @@ var traverserButton = document.getElementById("traverser");
 
 var TRAVERSER = function(){
   if (firstCaseBoat.firstChild === null && secondCaseBoat.firstChild === null ){
-    console.log("Un des cases sont vides !!! Donc tu ne peux pas partir")
+    console.log("Une des cases sont vides !!! Donc tu ne peux pas partir")
   } else {
+  movePosition();
   checkerTable();
   checkerBoat();
-  movePosition();
+  console.log(coin);
   coin+=1;
+  console.log(coin);
   checkerTable();
   winCondition();
   }
@@ -450,12 +462,14 @@ var winCondition = function() {
 
     if(document.getElementById(actualCell).firstChild !== null){
       compteurElement += 1;
-      console.log(compteurElement);
+      console.log("Compter win à  :", compteurElement);
     } else {
       //pass
     }
   }
   if(compteurElement == 6){
+    document.getElementById("flute").play();
+    document.getElementById("rame").pause();
     document.getElementById("win").style.display = "flex";
     overlay.classList.add("active");
 
@@ -463,11 +477,6 @@ var winCondition = function() {
     //pass
   }
 }
-
-// test images I
-var img = document.createElement("img");
-img.src = "image/papyrus.svg";
-
 
 
 // Chrono
@@ -528,7 +537,34 @@ function closse_button(){
 }
 function resetreload(){
   document.location.reload();
-  
+
+}
+
+//Remet le compteur à 0
+var stopCountUp = function() {
+  seconds.textContent = 0;
+};
+
+//Remet le bateau à ca position initial
+var intialBoat = function() {
+  idBoat.style.left = "25vw";
+}
+
+// Remet le BlockCanvas à ca position initial
+var intialCanvasBlock = function() {
+  idCanvas.style.right = "O";
+  idCanvas.style.left = "";
+}
+
+// FONCTION CALL
+var RESET = function() {
+  //coin = 0;
+  //intialPositionKP();
+  //intialBoat();
+  //intialCanvasBlock();
+  //stopCountUp();
+  //debbugSelector.style.backgroundColor = "";
+  document.location.reload();
 }
 
 
@@ -548,4 +584,3 @@ setTimeout(show_modal, 1000);
 
 
 resetButton.addEventListener("click", RESET);
-
