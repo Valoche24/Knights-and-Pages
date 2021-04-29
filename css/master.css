@@ -126,7 +126,6 @@ footer{
 .close-button {
   position: absolute;
   cursor: pointer;
-  border: none;
   outline: none;
   font-size: 2em;
   font-weight: bold;
@@ -331,3 +330,26 @@ footer{
 
 
 /* /////////////////////////////// BUTTON /////////////////////////////// */
+
+button{
+  background-image: url("../image/panel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+   box-sizing: border-box;
+   cursor: pointer;
+   line-height: 1;
+   margin: 18px;
+   padding: 15px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   outline: none;
+   position: relative;
+   text-shadow:0 1px 1px rgba(180, 150, 100, 1);
+   -webkit-transition: all 0.2s ease-in-out 0s;
+   -moz-transition: all 0.2s ease-in-out 0s;
+   -ms-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    border-radius: 10px;
+    border: 3px solid rgba(75, 50, 35, 1);
+}

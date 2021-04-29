@@ -27,9 +27,13 @@ footer {
 
 #window-debbug{
   font-family: cabazon, serif;
-
 }
 
+button{
+  font-family: fakir-new, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
 
 /* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide
 
