@@ -2,21 +2,22 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>PUZZLE : Knights & Pages</title>
+    <title> ENIGMA : Knights & Pages</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/tingle.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/typo.css">
     <link rel="stylesheet" href="https://use.typekit.net/wqy0gzw.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/ico" href="css/favicon.ico" />
+    <!--Mettre le favicon, icon en haut de page: -->
   </head>
   <body>
+
 
     <header>
 
         <a href="index.html"><img src="image/logo.png" alt=""></a>
-
 
     </header>
 
@@ -24,22 +25,24 @@
 
     <button data-modal-target="#modal">i</button>
     <div class="modal" id="modal">
-      <img src="image/papyrus.PNG" alt="">
+      <button data-close-button class="close-button">&times;</button>
+      <img src="image/papyrus.png" alt="">
       <div class="">
-        <button data-close-button class="close-button">&times;</button>
         <div class="slideshow-container">
           <div class="mySlides">
             <h2>Welcome</h2>
             <p>Welcome to the KNIGHTS AND PAGES game! In a forest full of danger, there are knights and their servants.
-An obstacle is facing them, it's up to you to find the solution!
-
-This game is a web design project made at ECV</p>
+              An obstacle is facing them, it's up to you to find the solution! This game is a web design project made at ECV</p>
             <div class="numbertext">1/3</div>
           </div>
           <div class="mySlides">
-            <h2>What is porblem to solve?</h2>
-            <p>Many years ago, three knight waited to cross the river neva. Each Knight had his own page, so there were six people. The boat that they had could only carry two. However the knights were ferocious killers and the three pages were terrified. In fact, it was certain that any of the page would die of heart failure if he were not protected at every instant from the other knights by the presence oçf his own master. </p>
-            <p>was there any way to cross everyone over the river without losing a page ?</p>
+            <h2>What is problem to solve?</h2>
+            <p> Many years ago, three knights waited to cross the river neva.Each knight had his own page, so there were six people.</p>
+            <p>The boat that they had could only carry two.<br>
+              However the knights were ferocious killers
+              and the three pages were terrified. <br> In fact, it was certain that any of the pages would die
+              of heart failure if he were not protected at every instant from the other knights by the presence of his own master.</p>
+            <p>Was there any way to cross everyone over the river <br> without losing a page ?</p>
             <div class="numbertext">2/3</div>
           </div>
           <div class="mySlides">
@@ -51,26 +54,28 @@ This game is a web design project made at ECV</p>
             <div class="numbertext">3/3</div>
           </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)"><img src="image/flecheleft.png" alt=""></a>
-        <a class="next" onclick="plusSlides(1)"> <img src="image/flecheright.png" alt="">  </a>
+        <a class="next" onclick="plusSlides(-1)"> <img src="image/flecheright.png" alt="">  </a>
+        <a class="prev" onclick="plusSlides(1)"><img src="image/flecheleft.png" alt=""></a>
       </div>
     </div>
+
+
     <div id="overlay"></div>
 
     <section id="playGround">
 
       <table id="leftTable" class="table">
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-blue.svg" alt="" data-humain="knight" data-color="red"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-blue.svg" alt="" data-humain="page" data-color="red"></td>
+          <td class="case_table" data-column="1" data-row="1" id="111"></td>
+          <td class="case_table" data-column="2" data-row="1" id="121"></td>
         </tr>
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-red.svg" alt="" data-humain="knight" data-color="blue"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-red.svg" alt="" data-humain="page" data-color="blue"></td>
+          <td class="case_table" data-column="1" data-row="2" id="112"></td>
+          <td class="case_table" data-column="2" data-row="2" id="122"></td>
         </tr>
         <tr>
-          <td class="case_table"><img class="base" draggable="true" src="image/knight-yellow.svg" alt="" data-humain="knight" data-color="yellow"></td>
-          <td class="case_table"><img class="base" draggable="true" src="image/page-yellow.svg" alt="" data-humain="page" data-color="yellow"></td>
+          <td class="case_table" data-column="1" data-row="3" id="113"></td>
+          <td class="case_table" data-column="2" data-row="3" id="123"></td>
         </tr>
       </table>
 
@@ -84,71 +89,115 @@ This game is a web design project made at ECV</p>
 
       <table id="rightTable" class="table">
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="1" id="211"></td>
+          <td class="case_table" data-column="2" data-row="1" id="221"></td>
         </tr>
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="2" id="212"></td>
+          <td class="case_table" data-column="2" data-row="2" id="222"></td>
         </tr>
         <tr>
-          <td class="case_table"></td>
-          <td class="case_table"></td>
+          <td class="case_table" data-column="1" data-row="3" id="213"></td>
+          <td class="case_table" data-column="2" data-row="3" id="223"></td>
         </tr>
       </table>
 
       <canvas id="canvasBlock"></canvas>
 
-
     </section>
 
-    <input type="button" id="traverser" value="Traverser le fleuve">
+    <button type="button" id="traverser">Traverser le fleuve</button>
 
     <div id="window-debbug">
       <p>Time : <span id="seconds">0</span></p>
 
-      <button type="text" name="reset" id="reset">RESET</button>
+      <button type="button" name="reset" id="reset">RESET</button>
     </div>
 
-    <div class="modal" id="gameOver">
-      <div class="head-modal">
-        <button data-close-button class="close-button">&times;</button>
-        <h2>GAME OVER </h2>
-      </div>
-          <p>The knight kill the page! </p>
+
+      <div class="modal" id="gameOver">
+        <img src="image/papyrus.png" alt="">
+        <div class="head-modal">
+          <h2>Game Over</h2>
+        </div>
+        <p>HO no, you loose..</p>
+        <button type="button" name="reset" id="reset2">RESET</button>
     </div>
 
-    <div class="modal" id="WIN">
+    <div class="modal" id="win">
+      <img src="image/papyrus.png" alt="">
       <div class="head-modal">
-        <button data-close-button class="close-button">&times;</button>
-        <h2>You Win </h2>
+        <h2> WIN </h2>
       </div>
-          <p>They All cross the river!  </p>
+      <p>Well done, you won !</p>
+      <button type="button" name="reset" id="reset3">RESET</button>
     </div>
+
+
+    <div id="popup-box">
+      <div class="top-bar">
+        <button onclick="close_modal()" id="close-button">X</button>
+      </div>
+
+      <div class="content">
+          <h2>
+            Welcome
+          </h2>
+      </div>
+
+      <div id="popuptext">
+        <p> <br> Many years ago, three knights waited to cross the river neva.<br>
+          Each knight had his own page, so there were six people.<br>
+          The boat that they had could only carry two.<br>
+        </p>
+
+        <p>  However the knights were ferocious killers <br>
+          and the three pages were terrified. <br> In fact, it was certain that any of the pages would die
+          of heart failure <br> if he were not protected at every instant <br> from the other knights by the presence of his own master.</p>
+
+          <p>Was there any way to cross everyone
+            over the river <br> without losing a page ?</p>
+
+      </div>
+    </div>
+
+
 
     <footer>
-
-
         <p>  DE BLOMAC Camille  <p>
         <p>  GAY Laure-Helene <p>
         <p>  LOPAT Mélodie  <p>
-        <p>VALIANI YAnn <p>
-
-
-
-
-
+        <p>VALIANI Yann <p>
     </footer>
 
 
+<audio id="cut">
+  <source src="script/soundFX/soundFXcut.mp3" type="audio/mpeg">
+</audio>
 
+<audio id="flute">
+  <source src="script/soundFX/soundFXflute.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="hurt">
+  <source src="script/soundFX/soundFXhurt.mp3" type="audio/mpeg">
+</audio>
+
+<audio controls style="display:none" id="audio" autoplay="true" loop="true">
+  <source src="script/soundFX/soundFXmusique.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="page">
+  <source src="script/soundFX/soundFXpage.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="rame">
+  <source src="script/soundFX/soundFXrame.mp3" type="audio/mpeg">
+</audio>
 
     <script src="script/action.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script/tingle.js"></script>
 
-
-
+    
 
   </body>
 </html>

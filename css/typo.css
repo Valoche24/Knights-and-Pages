@@ -8,7 +8,6 @@ body{
   font-family: fakir-new, sans-serif;
   font-feature-settings: 'dlig', 'liga', 'calt', 'frac', "salt"; /* MARCHE A MOITIé !!! */
   font-variant-numeric: diagonal-fractions;
-
 }
 
 h2{
@@ -18,6 +17,7 @@ h2{
 
 .numbertext{
   font-family: 'Playfair Display', serif;
+  font-size: 20px;
 }
 
 footer {
@@ -25,6 +25,25 @@ footer {
   line-height: 1.4em;
 }
 
+#window-debbug{
+  font-family: cabazon, serif;
+  position: absolute;
+  margin-bottom: 1vw;
+  left: 4vw;
+bottom: 2vw;
+
+}
+
+
+#traverser {
+margin-right: 30em
+}
+
+button{
+  font-family: fakir-new, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
 
 /* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide
 
