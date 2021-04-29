@@ -25,9 +25,9 @@
 
     <button data-modal-target="#modal">i</button>
     <div class="modal" id="modal">
-      <img src="image/papyrus.PNG" alt="">
+      <button data-close-button class="close-button">&times;</button>
+      <img src="image/papyrus.png" alt="">
       <div class="">
-        <button data-close-button class="close-button">&times;</button>
         <div class="slideshow-container">
           <div class="mySlides">
             <h2>Welcome</h2>
@@ -54,8 +54,8 @@
             <div class="numbertext">3/3</div>
           </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)"><img src="image/flecheleft.png" alt=""></a>
-        <a class="next" onclick="plusSlides(1)"> <img src="image/flecheright.png" alt="">  </a>
+        <a class="next" onclick="plusSlides(-1)"> <img src="image/flecheright.png" alt="">  </a>
+        <a class="prev" onclick="plusSlides(1)"><img src="image/flecheleft.png" alt=""></a>
       </div>
     </div>
 
@@ -106,34 +106,31 @@
 
     </section>
 
-    <button type="text" name="reset" id="traverser">Traverser le fleuve</button>
+    <button type="button" id="traverser">Traverser le fleuve</button>
 
     <div id="window-debbug">
       <p>Time : <span id="seconds">0</span></p>
 
-      <button type="text" name="reset" id="reset">RESET</button>
+      <button type="button" name="reset" id="reset">RESET</button>
     </div>
 
 
       <div class="modal" id="gameOver">
-        <img src="image/papyrus.svg" alt="">
+        <img src="image/papyrus.png" alt="">
         <div class="head-modal">
           <h2>Game Over</h2>
         </div>
-      <p>HO no, you loose..</p>
-      <button type="text" name="reset" id="reset">RESET</button>
-      <input type="button" onclick="refreshloose()" value="Retry"/>
+        <p>HO no, you loose..</p>
+        <button type="button" name="reset" id="reset2">RESET</button>
     </div>
 
     <div class="modal" id="win">
-      <img src="image/papyrus.svg" alt="">
+      <img src="image/papyrus.png" alt="">
       <div class="head-modal">
         <h2> WIN </h2>
-        <br>
-        <p>Well done, you won !</p>
-        <br>
-        <input type="button" onclick="refreshwin()" value="Good Game"/> <br/><br/>
       </div>
+      <p>Well done, you won !</p>
+      <button type="button" name="reset" id="reset3">RESET</button>
     </div>
 
 
@@ -143,11 +140,9 @@
       </div>
 
       <div class="content">
-        <center>
           <h2>
             Welcome
           </h2>
-      </center>
       </div>
 
       <div id="popuptext">
@@ -172,14 +167,9 @@
         <p>  DE BLOMAC Camille  <p>
         <p>  GAY Laure-Helene <p>
         <p>  LOPAT Mélodie  <p>
-        <p>VALIANI YAnn <p>
+        <p>VALIANI Yann <p>
     </footer>
 
-    <h2>Win</h2>
-  </div>
-  <p>BLABLABLABLA</p>
-  <button type="text" name="reset" id="reset">RESET</button>
-</div>
 
 <audio id="cut">
   <source src="script/soundFX/soundFXcut.mp3" type="audio/mpeg">

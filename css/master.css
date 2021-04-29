@@ -107,8 +107,9 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 50%;
-  left: 50%;
+  flex-direction: column;
+  top: 45vh;
+  left: 50vw;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
@@ -120,12 +121,16 @@ footer{
 
 
 .close-button {
+  position: absolute;
   cursor: pointer;
   border: none;
   outline: none;
-  background: none;
-  font-size: 1.25rem;
+  font-size: 2em;
   font-weight: bold;
+  z-index: 20;
+  right: 30px;
+  top: 0;
+
 }
 
 
@@ -157,23 +162,7 @@ footer{
   z-index: 10;
 }
 
-#win img, #gameOver img {
-  margin: 1em;
-}
 
-#win{
-  display: none;
-  transform: none;
-  transition: 200ms ease-in-out;
-  z-index: 10;
-}
-
-#gameOver{
-  display: none;
-  transform: none;
-  transition: 200ms ease-in-out;
-  z-index: 10;
-}
 
 #win img, #gameOver img {
   z-index: -1;
@@ -235,13 +224,6 @@ footer{
 
 
 
-#gameOver{
-  display: none;
-}
-
-#WIN {
-  display: none;
-}
 
 
 
@@ -266,18 +248,18 @@ footer{
 
 }
 
-.prev img,.next img {
+.prev img, .next img {
   width: 150px;
   height: 150px;
+  transform: scaleX(-1); /* je sais pas pk */
+
+
 }
 
 /* Position the "next button" to the right */
-.next {
-  right: 0px;
-}
+
 
 .prev {
-  left: 0px;
   right: 30%;
 }
 
@@ -324,7 +306,7 @@ footer{
 	top: calc(50% - 125px);
 	left: calc(50% - 200px);
 	display: none;
-  background-image:url("../image/papyrus.svg");
+  background-image:url("../image/papyrus.png");
   background-repeat: no-repeat;
   background-position: center;
   font-size: 14px;
@@ -343,3 +325,6 @@ footer{
 #text {
   font-size: 14px;
 }
+
+
+/* /////////////////////////////// BUTTON /////////////////////////////// */

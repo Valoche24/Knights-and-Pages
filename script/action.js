@@ -102,16 +102,6 @@ var gameOver = function(){
   overlay.classList.add("active");
 }
 
-  function refreshloose() {
-    window.location.reload(false);
-  }
-
-  //WIN
-
-   function refreshwin() {
-      window.location.reload(false);
-    }
-
 //CHECKER TABLE
 
 var checkerTable = function(){
@@ -495,50 +485,11 @@ var timer = window.setInterval(countUp, 1000);
 
 //////////RESET//////////
 
-var resetButton = document.getElementById('reset');
+var resetButton = document.getElementById("reset");
+var resetButton2 = document.getElementById("reset2");
+var resetButton3 = document.getElementById("reset3");
 
-//Remet le compteur à 0
-var stopCountUp = function() {
-  seconds.textContent = 0;
-}
 
-//Remet le bateau à ca position initial
-var intialBoat = function() {
-  idBoat.style.left = "25vw";
-}
-
-// Remet le BlockCanvas à ca position initial
-var intialCanvasBlock = function() {
-  idCanvas.style.right = "O";
-  idCanvas.style.left = "";
-}
-
-// FONCTION CALL
-var RESET = function() {
-  //coin = 0;
-  //intialPositionKP();
-  //intialBoat();
-  //intialCanvasBlock();
-  //stopCountUp();
-  //debbugSelector.style.backgroundColor = "";
-  document.location.reload();
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton1');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton2');
-  closse_button.style.display = "none";
-}
-function closse_button(){
-  var closse_button = document.getElementById('clossebutton3');
-  closse_button.style.display = "none";
-}
-function resetreload(){
-  document.location.reload();
-
-}
 
 //Remet le compteur à 0
 var stopCountUp = function() {
@@ -558,29 +509,9 @@ var intialCanvasBlock = function() {
 
 // FONCTION CALL
 var RESET = function() {
-  //coin = 0;
-  //intialPositionKP();
-  //intialBoat();
-  //intialCanvasBlock();
-  //stopCountUp();
-  //debbugSelector.style.backgroundColor = "";
   document.location.reload();
 }
 
-
-// auto show modal
-// call the fucntion after 3 sec
-setTimeout(show_modal, 1000);
-
- function show_modal(){
- 	 var popup_box = document.getElementById('popup-box');
- 	 popup_box.style.display = "block";
- }
-
- function close_modal(){
-  var popup_box = document.getElementById('popup-box');
-  popup_box.style.display = "none";
-}
-
-
 resetButton.addEventListener("click", RESET);
+resetButton2.addEventListener("click", RESET);
+resetButton3.addEventListener("click", RESET);
