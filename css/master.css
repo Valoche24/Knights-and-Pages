@@ -64,7 +64,8 @@ footer{
   -ms-transition: 3s;
   -o-transition: 3s;
   transition: 1s;
-  left: 55vw !important;
+  left: 40vw;
+  transform: scaleX(-1);
 }
 
 #boat.horizTranslateToLeft {
@@ -73,7 +74,9 @@ footer{
   -ms-transition: 3s;
   -o-transition: 3s;
   transition: 1s;
-  left: 25vw !important;
+  left: 20vw;
+  transform: scaleX(1);
+
 }
 
 #canvasBlock{

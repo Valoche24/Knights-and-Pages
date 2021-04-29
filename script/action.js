@@ -265,13 +265,12 @@ var moveBoat = function(){
 
   document.getElementById("rame").play();
 
-
   if (coin%2 === 0) {
-    idBoat.style.left = "25vw";
-    idBoat.style.transform = "scaleX(1)";
+    boat.classList.add('horizTranslateToLeft');
+    boat.classList.remove('horizTranslateToRight');
   } else {
-    idBoat.style.left = "45vw";
-    idBoat.style.transform = "scaleX(-1)";
+    boat.classList.add('horizTranslateToRight');
+    boat.classList.remove('horizTranslateToLeft');
   }
 }
 
