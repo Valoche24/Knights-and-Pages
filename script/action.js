@@ -495,35 +495,6 @@ var stopCountUp = function() {
   seconds.textContent = 0;
 };
 
-//Traverser du bateau//
-
-
-var boatCurrentPosition = 0; // 0 : left, 1 : right
-var boat = document.getElementById("boat");
-
-
-var traverserFleuve = function(){​​​​​​​
-
-
-    if (boatCurrentPosition == 0){​​​​​​​
-    boat.classList.add('horizTranslateToRight');
-    boat.classList.remove('horizTranslateToLeft');
-    boatCurrentPosition = 1;
-    }​​​​​​​
-    else{​​​​​​​
-    boat.classList.add('horizTranslateToLeft');
-    boat.classList.remove('horizTranslateToRight');
-    boatCurrentPosition = 0;
-    }​​​​​​​
-
-}​​​​​​​;
-
-
-
-var traverserButton = document.getElementById("traverser");
-traverserButton.addEventListener("click", traverserFleuve);
-
-
 //Remet le bateau à ca position initial
 var intialBoat = function() {
   idBoat.style.left = "25vw";
