@@ -111,8 +111,8 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: 45vh;
-  left: 50vw;
+  top: 30%;
+  left: 45%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
   z-index: 10;
@@ -131,7 +131,7 @@ footer{
   font-weight: bold;
   z-index: 20;
   right: 30px;
-  top: 0;
+  top: -50px;
 
 }
 
@@ -352,4 +352,15 @@ button{
     transition: all 0.2s ease-in-out 0s;
     border-radius: 10px;
     border: 3px solid rgba(75, 50, 35, 1);
+}
+
+#traverser, #reset{
+  z-index: 22;
+}
+
+/* /////////////////////////////// VIDEO /////////////////////////////// */
+
+video{
+  height: 200px;
+  margin: 30px;
 }

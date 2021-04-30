@@ -94,6 +94,8 @@ document.getElementById("audio").play();
 //GAMEOVER
 
 var debbugSelector = document.getElementById("window-debbug");
+
+
 var gameOver = function(){
   document.getElementById("hurt").play();
   document.getElementById("cut").play();
@@ -461,7 +463,6 @@ var winCondition = function() {
     document.getElementById("rame").pause();
     document.getElementById("win").style.display = "flex";
     overlay.classList.add("active");
-
   } else {
     //pass
   }
