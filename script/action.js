@@ -94,6 +94,8 @@ document.getElementById("audio").play();
 //GAMEOVER
 
 var debbugSelector = document.getElementById("window-debbug");
+
+
 var gameOver = function(){
   document.getElementById("hurt").play();
   document.getElementById("cut").play();
@@ -265,13 +267,12 @@ var moveBoat = function(){
 
   document.getElementById("rame").play();
 
-
   if (coin%2 === 0) {
-    idBoat.style.left = "25vw";
-    idBoat.style.transform = "scaleX(1)";
+    boat.classList.add('horizTranslateToLeft');
+    boat.classList.remove('horizTranslateToRight');
   } else {
-    idBoat.style.left = "45vw";
-    idBoat.style.transform = "scaleX(-1)";
+    boat.classList.add('horizTranslateToRight');
+    boat.classList.remove('horizTranslateToLeft');
   }
 }
 
@@ -462,7 +463,6 @@ var winCondition = function() {
     document.getElementById("rame").pause();
     document.getElementById("win").style.display = "flex";
     overlay.classList.add("active");
-
   } else {
     //pass
   }
@@ -486,6 +486,10 @@ var timer = window.setInterval(countUp, 1000);
 //////////RESET//////////
 
 var resetButton = document.getElementById("reset");
+var resetButton2 = document.getElementById("reset2");
+var resetButton3 = document.getElementById("reset3");
+
+
 
 //Remet le compteur à 0
 var stopCountUp = function() {
@@ -505,13 +509,9 @@ var intialCanvasBlock = function() {
 
 // FONCTION CALL
 var RESET = function() {
-  //coin = 0;
-  //intialPositionKP();
-  //intialBoat();
-  //intialCanvasBlock();
-  //stopCountUp();
-  //debbugSelector.style.backgroundColor = "";
   document.location.reload();
 }
 
 resetButton.addEventListener("click", RESET);
+resetButton2.addEventListener("click", RESET);
+resetButton3.addEventListener("click", RESET);
