@@ -12,12 +12,28 @@ body{
 
 h2{
   font-family: cabazon, serif;
+  font-size: 3em;
 }
 
 .numbertext{
   font-family: 'Playfair Display', serif;
+  font-size: 20px;
 }
 
+footer {
+  font-family: fakir-new, serif;
+  line-height: 1.4em;
+}
+
+#window-debbug{
+  font-family: cabazon, serif;
+}
+
+button{
+  font-family: fakir-new, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
 
 /* https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide
 
